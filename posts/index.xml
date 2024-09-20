@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Xudong ZHAO's Blog</title><link>https://www.xudongzhao.com/posts/</link><description>Recent content in Posts on Xudong ZHAO's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 20 Sep 2024 10:17:40 +0200</lastBuildDate><atom:link href="https://www.xudongzhao.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hhkb Keyborad Setting for Azerty French User</title><link>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</link><pubDate>Fri, 20 Sep 2024 10:17:40 +0200</pubDate><guid>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</guid><description>&lt;p>As a developer living in Paris, I have to use a standard AZERTY ISO French keyboard at work, so my HHKB needs to have a similar configuration to a standard French keyboard.&lt;/p>
 &lt;p>I used the HHKB mapping tool to change the Ctrl and Caps keys and AutoHotkey to map Alt + W to &amp;lt; and Alt + Shift + W to &amp;gt;.&lt;/p>
+&lt;h2 id="create-the-script">Create the script&lt;/h2>
 &lt;p>Here is the script:&lt;/p>
 &lt;pre tabindex="0">&lt;code>#Requires AutoHotkey v2.0
 !w::
@@ -10,7 +11,8 @@ Send &amp;#34;&amp;lt;&amp;#34;
 {
 Send &amp;#34;&amp;gt;&amp;#34;
 }
-&lt;/code>&lt;/pre></description></item><item><title>Ubuntu</title><link>https://www.xudongzhao.com/posts/ubuntu/</link><pubDate>Tue, 28 Nov 2023 08:10:29 +0000</pubDate><guid>https://www.xudongzhao.com/posts/ubuntu/</guid><description>&lt;h2 id="apt">apt&lt;/h2>
+&lt;/code>&lt;/pre>&lt;h2 id="run-automatically-the-script-every-time-your-computer-starts">Run automatically the script every time your computer starts&lt;/h2>
+&lt;p>Create a shortcut of your script:&lt;/p></description></item><item><title>Ubuntu</title><link>https://www.xudongzhao.com/posts/ubuntu/</link><pubDate>Tue, 28 Nov 2023 08:10:29 +0000</pubDate><guid>https://www.xudongzhao.com/posts/ubuntu/</guid><description>&lt;h2 id="apt">apt&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Installation Java&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install openjdk-17-jdk-headless
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
