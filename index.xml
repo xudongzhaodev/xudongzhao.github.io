@@ -1,30 +1,266 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xudong ZHAO's Blog</title><link>https://www.xudongzhao.com/</link><description>Recent content on Xudong ZHAO's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 03 Aug 2024 15:52:49 +0200</lastBuildDate><atom:link href="https://www.xudongzhao.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu</title><link>https://www.xudongzhao.com/posts/ubuntu/</link><pubDate>Tue, 28 Nov 2023 08:10:29 +0000</pubDate><guid>https://www.xudongzhao.com/posts/ubuntu/</guid><description>apt # Installation Java sudo apt install openjdk-17-jdk-headless # Désinstaller Java sudo update-alternatives --list java sudo apt-get purge openjdk-17-* sudo apt autoremove</description></item><item><title>Terraform</title><link>https://www.xudongzhao.com/posts/terraform/</link><pubDate>Mon, 27 Nov 2023 08:39:57 +0000</pubDate><guid>https://www.xudongzhao.com/posts/terraform/</guid><description>terraform commande terraform init terraform plan terraform destroy terraform destroy -target aws_instance.web terraform destroy -target github_repository.example terraform apply -auto-approve terraform validate terraform fmt Version terraform plan -var=&amp;#34;instance_type=t3.micro&amp;#34; terraform plan -var-file=custom.tfvars setx TF_VAR_instance_type t2.micro terraform show Terraform variable assignment</description></item><item><title>Git Cheatsheet</title><link>https://www.xudongzhao.com/posts/git-cheatsheet/</link><pubDate>Sat, 25 Nov 2023 21:25:54 +0000</pubDate><guid>https://www.xudongzhao.com/posts/git-cheatsheet/</guid><description>### install gh in ubuntu 24.04
-```bash
-sudo snap install gh
-gh auth login
-```</description></item><item><title>Google Cloud Platform</title><link>https://www.xudongzhao.com/posts/google-cloud-platform/</link><pubDate>Wed, 22 Nov 2023 09:25:33 +0100</pubDate><guid>https://www.xudongzhao.com/posts/google-cloud-platform/</guid><description> gcloud compute instances create my-first-instance gcloud compute instances list gcloud config list gcloud config configurations list gcloud compute instance-templates create test-templates --image=ubuntu-22.04 gcloud config set project kubernetes-406008 gcloud container clusters list gcloud container clusters create mygkecluster --num-nodes 2 --machine-type e2-micro gcloud components install gke-gcloud-auth-plugin kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.REASE --dry-run=client -o yaml&amp;gt; mydeployment.yaml #Création d&amp;#39;un bucket gsutil mb gs://nom_de_bucket</description></item><item><title>Gitops</title><link>https://www.xudongzhao.com/posts/gitops/</link><pubDate>Tue, 21 Nov 2023 14:44:02 +0100</pubDate><guid>https://www.xudongzhao.com/posts/gitops/</guid><description>Jira Ticket Jira service desks
-RUN équipement validation technique
-Envoie demande de validation aux responsable Faire action sur le projet yaml sur git
-Push</description></item><item><title>Monotoring</title><link>https://www.xudongzhao.com/posts/monotoring/</link><pubDate>Tue, 21 Nov 2023 10:07:32 +0100</pubDate><guid>https://www.xudongzhao.com/posts/monotoring/</guid><description>sp log dynatrace
-grafana
-loki
-prometheus
-ELK Elasticsearch Logstash Kibana</description></item><item><title>Vscode Remote Ssh Dev Google Gcp</title><link>https://www.xudongzhao.com/posts/vscode-remote-ssh-dev-google-gcp/</link><pubDate>Mon, 20 Nov 2023 13:57:02 +0100</pubDate><guid>https://www.xudongzhao.com/posts/vscode-remote-ssh-dev-google-gcp/</guid><description>Vscode Remote Development avec SSH et Google Cloud Platform ssh-keygen -t rsa -b 4096 -C &amp;#34;your-email@example.com&amp;#34; ssh -i &amp;#34;chemin_vers_votre_clé_privée&amp;#34; username@external_ip_address</description></item><item><title>Helm</title><link>https://www.xudongzhao.com/posts/helm/</link><pubDate>Mon, 20 Nov 2023 09:13:51 +0100</pubDate><guid>https://www.xudongzhao.com/posts/helm/</guid><description>helm vs kustomize
-Helm Helm the package manager for kubernetes
-Charts Package, un format de package, similaire apt, pip
-Repositories Répositorie comme apt pip
-Releases Un déploiement ou installation sur un cluster
-Exemple: installation Mariadb helm repo add bitnami https://charts.bitnami.com/bitnami helm repo update helm install mon-mariadb bitnami/mariadb helm install my-mariadb bitnami/mariadb --version 14.1.2 helm install mon-mariadb bitnami/mariadb -f mon_fichier.yaml helm uninstall [NOM_DE_LA_RELEASE] helm list helm install my-release oci://REGISTRY_NAME/REPOSITORY_NAME/mariadb helm install mariadb oci://registry-1.</description></item><item><title>Python</title><link>https://www.xudongzhao.com/posts/python-cheatsheet/</link><pubDate>Sat, 18 Nov 2023 19:56:23 +0100</pubDate><guid>https://www.xudongzhao.com/posts/python-cheatsheet/</guid><description>Anaconda conda cheatsheet</description></item><item><title>Kubernetes</title><link>https://www.xudongzhao.com/posts/kubernetes/</link><pubDate>Thu, 16 Nov 2023 09:17:00 +0100</pubDate><guid>https://www.xudongzhao.com/posts/kubernetes/</guid><description>Kubernetes commandes kubectl get namespaces kubectl get pods -A kubectl get po -A kubectl get pods --context default -n kube-system kubectl get services --context squash -n nightly nightly-cloud-mariadb -o yaml kubectl get deployment --context squash -n nightly-cloud kubectl create ns devops --context myContext .kube/config C:\Users\Formation\.kube kubectl apply -f volume.yaml kubectl get pv kubectl apply -f db-secret.yaml kubectl get secrets db-credentials -o yaml kubectl apply -f volumes.yaml kubectl get pv apply -f volumeClaim.</description></item><item><title>Vim Neomvim</title><link>https://www.xudongzhao.com/posts/vim-neomvim/</link><pubDate>Tue, 14 Nov 2023 14:22:09 +0100</pubDate><guid>https://www.xudongzhao.com/posts/vim-neomvim/</guid><description>&amp;ldquo;Ajouter Ouvrir avec NeoVim au menu contextuel clic droit. Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\*\shell\Ouvrir avec Neovim\command] @=&amp;#34;C:\\Program Files\\Neovim\\bin\\nvim-qt.exe -qwindowgeometry 1310x650+20+20 \&amp;#34;%1&amp;#34; Ouvrir la fenêtre de terminal :terminal :te :shell</description></item><item><title>Cmd Cheatsheet</title><link>https://www.xudongzhao.com/posts/cmd-cheatsheet/</link><pubDate>Mon, 13 Nov 2023 12:04:33 +0100</pubDate><guid>https://www.xudongzhao.com/posts/cmd-cheatsheet/</guid><description>dir Displays files and folders in the current directory
-cd, chdir Changes the directory or displays the current directory
-md, mkdir Creates a folder
-copy Copies files to another location
-move Moves files from one folder to another
-ren, rename Renames a file or a folder
-del Deletes files
-exit Exits the command line
-echo The echo of commands can be turned off with the command ECHO OFF or re-enabled with the command ECHO ON.</description></item><item><title>Conteneur</title><link>https://www.xudongzhao.com/posts/conteneur/</link><pubDate>Thu, 09 Nov 2023 14:15:44 +0100</pubDate><guid>https://www.xudongzhao.com/posts/conteneur/</guid><description>Docker Quelques commandes simples : docker images # voir la liste des images présentes sur le système docker pull nom_image # récupérer l’image du docker hub docker run nom_image # instancier un conteneur à partir de l’image docker ps # voir les instances en cours d’exécution docker kill id_instance # « tuer » l’instance (« docker ps » pour voir l’ID) Des commandes plus évoluées, pratiques : docker run --name mon_nom -d nom_image # instancier en tant que démon un conteneur docker run --rm -it nom_image /bin/bash # instancier un conteneur et s’y connecter Dockerfile FROM ENV pour run</description></item><item><title>Robot Framework</title><link>https://www.xudongzhao.com/posts/robot-framework/</link><pubDate>Wed, 08 Nov 2023 09:12:44 +0100</pubDate><guid>https://www.xudongzhao.com/posts/robot-framework/</guid><description>Installation Robot Framework Robocorp Code Robot Framework Language Server
-XPATH // Le noeud courant / Le noeaud fils .. Le noeud parent . Le noeud même, la valeur textuelle du noeud @ L&amp;rsquo;attribut [] Le prédicat: le noud dont
-RPA automatisation robotisée des processus (en anglais robotic process automation ou RPA)
-Keywords Wait Until Keyword Succeeds webdrivermanager firefox</description></item><item><title>Hugo Installation</title><link>https://www.xudongzhao.com/posts/hugo-installation/</link><pubDate>Mon, 06 Nov 2023 23:45:34 +0100</pubDate><guid>https://www.xudongzhao.com/posts/hugo-installation/</guid><description>test
-sudo apt-get update &amp;amp;&amp;amp; sudo apt-get -y install golang-go # Mac os brew install hugo # Ubuntu sudo apt install hugo hugo version git config --global init.defaultBranch main hugo new site etertech-blog -f yml hugo new post/proxmox-ve-tutoriel.md</description></item><item><title>Enable color highlighting for ls command in mac OS X Terminal</title><link>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</link><pubDate>Sat, 29 Jul 2023 14:42:11 +0100</pubDate><guid>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</guid><description>Because macOS now uses Zsh instead of Bash, we have to modify the ~/.zshrc file.
-echo &amp;#39;export CLICOLOR=1&amp;#39; &amp;gt;&amp;gt; ~/.zshrc echo &amp;#39;alias ls=&amp;#34;ls -G&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc echo &amp;#39;alias ll=&amp;#34;ls -lG&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc We could test it with ls ll</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xudong ZHAO's Blog</title><link>https://www.xudongzhao.com/</link><description>Recent content on Xudong ZHAO's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 20 Sep 2024 10:17:40 +0200</lastBuildDate><atom:link href="https://www.xudongzhao.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Hhkb Keyborad Setting for Azerty French User</title><link>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</link><pubDate>Fri, 20 Sep 2024 10:17:40 +0200</pubDate><guid>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</guid><description>&lt;p>As a developer living in Paris, I have to use a standard AZERTY ISO French keyboard at work, so my HHKB needs to have a similar configuration to a standard French keyboard.&lt;/p>
+&lt;p>I used the HHKB mapping tool to change the Ctrl and Caps keys and AutoHotkey to map Alt + W to &amp;lt; and Alt + Shift + W to &amp;gt;.&lt;/p>
+&lt;p>Here is the script:&lt;/p>
+&lt;pre tabindex="0">&lt;code>#Requires AutoHotkey v2.0
+!w::
+{
+Send &amp;#34;&amp;lt;&amp;#34;
+}
++!w::
+{
+Send &amp;#34;&amp;gt;&amp;#34;
+}
+&lt;/code>&lt;/pre></description></item><item><title>Ubuntu</title><link>https://www.xudongzhao.com/posts/ubuntu/</link><pubDate>Tue, 28 Nov 2023 08:10:29 +0000</pubDate><guid>https://www.xudongzhao.com/posts/ubuntu/</guid><description>&lt;h2 id="apt">apt&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Installation Java&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install openjdk-17-jdk-headless
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Désinstaller Java&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-alternatives --list java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get purge openjdk-17-*
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt autoremove
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Terraform</title><link>https://www.xudongzhao.com/posts/terraform/</link><pubDate>Mon, 27 Nov 2023 08:39:57 +0000</pubDate><guid>https://www.xudongzhao.com/posts/terraform/</guid><description>&lt;h2 id="terraform-commande">terraform commande&lt;/h2>
+&lt;h3 id="terraform-init">terraform init&lt;/h3>
+&lt;h3 id="terraform-plan">terraform plan&lt;/h3>
+&lt;h3 id="terraform-destroy">terraform destroy&lt;/h3>
+&lt;pre tabindex="0">&lt;code>terraform destroy -target aws_instance.web
+terraform destroy -target github_repository.example
+terraform apply -auto-approve
+terraform validate
+terraform fmt
+&lt;/code>&lt;/pre>&lt;h2 id="version">Version&lt;/h2>
+&lt;pre tabindex="0">&lt;code>terraform plan -var=&amp;#34;instance_type=t3.micro&amp;#34;
+terraform plan -var-file=custom.tfvars
+setx TF_VAR_instance_type t2.micro
+terraform show
+&lt;/code>&lt;/pre>&lt;p>&lt;a href="https://awstip.com/terraform-variable-assignment-aa676dae25e3">Terraform variable assignment&lt;/a>&lt;/p></description></item><item><title>Git Cheatsheet</title><link>https://www.xudongzhao.com/posts/git-cheatsheet/</link><pubDate>Sat, 25 Nov 2023 21:25:54 +0000</pubDate><guid>https://www.xudongzhao.com/posts/git-cheatsheet/</guid><description>&lt;p>&lt;strong>### install gh in ubuntu 24.04&lt;/strong>&lt;/p>
+&lt;p>```bash&lt;/p>
+&lt;p>sudo snap install gh&lt;/p>
+&lt;p>gh auth login&lt;/p>
+&lt;p>```&lt;/p></description></item><item><title>Google Cloud Platform</title><link>https://www.xudongzhao.com/posts/google-cloud-platform/</link><pubDate>Wed, 22 Nov 2023 09:25:33 +0100</pubDate><guid>https://www.xudongzhao.com/posts/google-cloud-platform/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud compute instances create my-first-instance
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud compute instances list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud config list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud config configurations list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud compute instance-templates create test-templates --image&lt;span style="color:#f92672">=&lt;/span>ubuntu-22.04
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud config set project kubernetes-406008
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud container clusters list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud container clusters create mygkecluster --num-nodes &lt;span style="color:#ae81ff">2&lt;/span> --machine-type e2-micro
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud components install gke-gcloud-auth-plugin
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl create deployment hello-world-rest-api --image&lt;span style="color:#f92672">=&lt;/span>in28min/hello-world-rest-api:0.0.1.REASE --dry-run&lt;span style="color:#f92672">=&lt;/span>client -o yaml&amp;gt; mydeployment.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Création d&amp;#39;un bucket&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gsutil mb gs://nom_de_bucket
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Gitops</title><link>https://www.xudongzhao.com/posts/gitops/</link><pubDate>Tue, 21 Nov 2023 14:44:02 +0100</pubDate><guid>https://www.xudongzhao.com/posts/gitops/</guid><description>&lt;h2 id="jira">Jira&lt;/h2>
+&lt;p>Ticket Jira
+service desks&lt;/p>
+&lt;h2 id="run">RUN&lt;/h2>
+&lt;p>équipement
+validation technique&lt;/p>
+&lt;h2 id="envoie-demande-de-validation-aux-responsable">Envoie demande de validation aux responsable&lt;/h2>
+&lt;h2 id="faire-action-sur-le-projet">Faire action sur le projet&lt;/h2>
+&lt;p>yaml sur git&lt;/p>
+&lt;h2 id="push">Push&lt;/h2></description></item><item><title>Monotoring</title><link>https://www.xudongzhao.com/posts/monotoring/</link><pubDate>Tue, 21 Nov 2023 10:07:32 +0100</pubDate><guid>https://www.xudongzhao.com/posts/monotoring/</guid><description>&lt;p>sp log dynatrace&lt;/p>
+&lt;p>grafana&lt;/p>
+&lt;p>loki&lt;/p>
+&lt;p>prometheus&lt;/p>
+&lt;p>ELK Elasticsearch Logstash Kibana&lt;/p></description></item><item><title>Vscode Remote Ssh Dev Google Gcp</title><link>https://www.xudongzhao.com/posts/vscode-remote-ssh-dev-google-gcp/</link><pubDate>Mon, 20 Nov 2023 13:57:02 +0100</pubDate><guid>https://www.xudongzhao.com/posts/vscode-remote-ssh-dev-google-gcp/</guid><description>&lt;h1 id="vscode-remote-development-avec-ssh-et--google-cloud-platform">Vscode Remote Development avec SSH et Google Cloud Platform&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ssh-keygen -t rsa -b &lt;span style="color:#ae81ff">4096&lt;/span> -C &lt;span style="color:#e6db74">&amp;#34;your-email@example.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ssh -i &lt;span style="color:#e6db74">&amp;#34;chemin_vers_votre_clé_privée&amp;#34;&lt;/span> username@external_ip_address
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Helm</title><link>https://www.xudongzhao.com/posts/helm/</link><pubDate>Mon, 20 Nov 2023 09:13:51 +0100</pubDate><guid>https://www.xudongzhao.com/posts/helm/</guid><description>&lt;p>helm vs kustomize&lt;/p>
+&lt;h2 id="helm">Helm&lt;/h2>
+&lt;p>Helm the package manager for kubernetes&lt;/p>
+&lt;h3 id="charts">Charts&lt;/h3>
+&lt;p>Package, un format de package, similaire apt, pip&lt;/p>
+&lt;h3 id="repositories">Repositories&lt;/h3>
+&lt;p>Répositorie comme apt pip&lt;/p>
+&lt;h3 id="releases">Releases&lt;/h3>
+&lt;p>Un déploiement ou installation sur un cluster&lt;/p>
+&lt;h2 id="exemple-installation-mariadb">Exemple: installation Mariadb&lt;/h2>
+&lt;pre tabindex="0">&lt;code>helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm install mon-mariadb bitnami/mariadb
+helm install my-mariadb bitnami/mariadb --version 14.1.2
+helm install mon-mariadb bitnami/mariadb -f mon_fichier.yaml
+helm uninstall [NOM_DE_LA_RELEASE]
+helm list
+helm install my-release oci://REGISTRY_NAME/REPOSITORY_NAME/mariadb
+helm install mariadb oci://registry-1.docker.io/bitnamicharts/mariadb
+# sous PowerShell
+$encodedPassword = kubectl get secret --namespace devops mariadb -o jsonpath=&amp;#34;{.data.mariadb-root-password}&amp;#34;
+$decodedPassword = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($encodedPassword))
+Write-Output $decodedPassword
+# sous Bash
+kubectl get secret --namespace devops my-mariadb -o jsonpath=&amp;#34;{.data.mariadb-root-password}&amp;#34; | base64 -d
+kubectl run my-mariadb-client --rm --tty -i --restart=&amp;#39;Never&amp;#39; --image docker.io/bitnami/mariadb:11.1.3-debian-11-r0 --namespace devops --command -- bash
+helm get notes my-mariadb
+helm get values mon-mariadb
+kubectl run mon-mariadb-client --rm --tty -i --restart=&amp;#39;Never&amp;#39; --image docker.io/bitnami/mariadb:11.1.3-debian-11-r0 --namespace devops001 --command -- bash
+&lt;/code>&lt;/pre></description></item><item><title>Python</title><link>https://www.xudongzhao.com/posts/python-cheatsheet/</link><pubDate>Sat, 18 Nov 2023 19:56:23 +0100</pubDate><guid>https://www.xudongzhao.com/posts/python-cheatsheet/</guid><description>&lt;h2 id="anaconda">Anaconda&lt;/h2>
+&lt;p>&lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda cheatsheet&lt;/a>&lt;/p></description></item><item><title>Kubernetes</title><link>https://www.xudongzhao.com/posts/kubernetes/</link><pubDate>Thu, 16 Nov 2023 09:17:00 +0100</pubDate><guid>https://www.xudongzhao.com/posts/kubernetes/</guid><description>&lt;h2 id="kubernetes-commandes">Kubernetes commandes&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Shell" data-lang="Shell">&lt;span style="display:flex;">&lt;span>kubectl get namespaces
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods -A
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get po -A
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods --context default -n kube-system
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get services --context squash -n nightly nightly-cloud-mariadb -o yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get deployment --context squash -n nightly-cloud
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl create ns devops --context myContext
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.kube/config
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>C:&lt;span style="color:#ae81ff">\U&lt;/span>sers&lt;span style="color:#ae81ff">\F&lt;/span>ormation&lt;span style="color:#ae81ff">\.&lt;/span>kube
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl apply -f volume.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl apply -f db-secret.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get secrets db-credentials -o yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl apply -f volumes.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apply -f volumeClaim.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pvc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl logs mariadb-6c57fb4b8-t9vxt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl exec -it mariadb-6c57fb4b8-t9vxt -- /bin/sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ctrl +
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>minikube service nom-du-service --url
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>minikube service -n nom_de_space nom_de_service --url
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl delete pods nom_de_pod
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl delete pvc nom_de_pvc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl delete pv nom_de_pv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl edit pod nom_de_pod
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get rs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get deployment
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get configmap
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods --watch
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods,service
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl logs -f
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pod -l nom_de_pod
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get secrets
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get docker-registry -o yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods -o wide
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--force
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--grace-period&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods --all-namespace
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl cp nom_de_pod:/opt/test.sh my_stuff
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pas de cp entre conteneur
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#supprimer namespace&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl delete namespace devops
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl create namespace &lt;span style="color:#f92672">[&lt;/span>nom_du_namespace&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl config set-context --current --namespace&lt;span style="color:#f92672">=&lt;/span>devops
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get statefulset
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get all
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>helm get values my-mariadb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>helm show values argo/argo-cd &amp;gt; values.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>helm upgrade my-argo-cd argo/argo-cd --version 5.51.4 -f values.yaml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Kubernetes custom Resources Definition &lt;span style="color:#f92672">(&lt;/span>CRD&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl get pods -o wide
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> kubectl get svc -w
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl scale deploy hello-world-rest-api --replicas&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">3&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Kubernetes choisit les nœuds pour déployer un conteneur en se basant sur les informations des requests, et non sur les limits. Toutefois, en pratique, il est possible de mettre ces deux valeurs égales.&lt;/p></description></item><item><title>Vim Neomvim</title><link>https://www.xudongzhao.com/posts/vim-neomvim/</link><pubDate>Tue, 14 Nov 2023 14:22:09 +0100</pubDate><guid>https://www.xudongzhao.com/posts/vim-neomvim/</guid><description>&lt;h2 id="ajouter-ouvrir-avec-neovim--au-menu-contextuel-clic-droit">&amp;ldquo;Ajouter Ouvrir avec NeoVim au menu contextuel clic droit.&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Powershell" data-lang="Powershell">&lt;span style="display:flex;">&lt;span>Windows Registry Editor Version &lt;span style="color:#ae81ff">5.00&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[HKEY_CLASSES_ROOT\*\shell\Ouvrir avec Neovim\command]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>@=&lt;span style="color:#e6db74">&amp;#34;C:\\Program Files\\Neovim\\bin\\nvim-qt.exe -qwindowgeometry 1310x650+20+20 \&amp;#34;&lt;/span>&lt;span style="color:#66d9ef">%&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span>&lt;span style="color:#e6db74">&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ouvrir-la-fenêtre-de-terminal">Ouvrir la fenêtre de terminal&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>:terminal
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>:te
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>:shell
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Cmd Cheatsheet</title><link>https://www.xudongzhao.com/posts/cmd-cheatsheet/</link><pubDate>Mon, 13 Nov 2023 12:04:33 +0100</pubDate><guid>https://www.xudongzhao.com/posts/cmd-cheatsheet/</guid><description>&lt;h3 id="dir">dir&lt;/h3>
+&lt;p>Displays files and folders in the current directory&lt;/p>
+&lt;h3 id="cd-chdir">cd, chdir&lt;/h3>
+&lt;p>Changes the directory or displays the current directory&lt;/p>
+&lt;h3 id="md-mkdir">md, mkdir&lt;/h3>
+&lt;p>Creates a folder&lt;/p>
+&lt;h3 id="copy">copy&lt;/h3>
+&lt;p>Copies files to another location&lt;/p>
+&lt;h3 id="move">move&lt;/h3>
+&lt;p>Moves files from one folder to another&lt;/p>
+&lt;h3 id="ren-rename">ren, rename&lt;/h3>
+&lt;p>Renames a file or a folder&lt;/p>
+&lt;h3 id="del">del&lt;/h3>
+&lt;p>Deletes files&lt;/p>
+&lt;h3 id="exit">exit&lt;/h3>
+&lt;p>Exits the command line&lt;/p>
+&lt;h3 id="echo">echo&lt;/h3>
+&lt;p>The echo of commands can be turned off with the command ECHO OFF or re-enabled with the command ECHO ON. This command is also useful for displaying messages on the screen.&lt;/p></description></item><item><title>Conteneur</title><link>https://www.xudongzhao.com/posts/conteneur/</link><pubDate>Thu, 09 Nov 2023 14:15:44 +0100</pubDate><guid>https://www.xudongzhao.com/posts/conteneur/</guid><description>&lt;h2 id="docker">Docker&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>Quelques commandes simples :
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker images &lt;span style="color:#75715e"># voir la liste des images présentes sur le système&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker pull nom_image &lt;span style="color:#75715e"># récupérer l’image du docker hub&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run nom_image &lt;span style="color:#75715e"># instancier un conteneur à partir de l’image&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker ps &lt;span style="color:#75715e"># voir les instances en cours d’exécution&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker kill id_instance &lt;span style="color:#75715e"># « tuer » l’instance (« docker ps » pour voir l’ID)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Des commandes plus évoluées, pratiques :
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run --name mon_nom -d nom_image &lt;span style="color:#75715e"># instancier en tant que démon un conteneur&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run --rm -it nom_image /bin/bash &lt;span style="color:#75715e"># instancier un conteneur et s’y connecter&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dockerfile">Dockerfile&lt;/h2>
+&lt;h3 id="from">FROM&lt;/h3>
+&lt;h3 id="env">ENV&lt;/h3>
+&lt;p>pour run&lt;/p></description></item><item><title>Robot Framework</title><link>https://www.xudongzhao.com/posts/robot-framework/</link><pubDate>Wed, 08 Nov 2023 09:12:44 +0100</pubDate><guid>https://www.xudongzhao.com/posts/robot-framework/</guid><description>&lt;h2 id="installation-robot-framework">Installation Robot Framework&lt;/h2>
+&lt;p>Robocorp Code
+Robot Framework Language Server&lt;/p>
+&lt;h2 id="xpath">XPATH&lt;/h2>
+&lt;p>// Le noeud courant
+/ Le noeaud fils
+.. Le noeud parent
+. Le noeud même, la valeur textuelle du noeud
+@ L&amp;rsquo;attribut
+[] Le prédicat: le noud dont&lt;/p>
+&lt;h2 id="rpa">RPA&lt;/h2>
+&lt;p>automatisation robotisée des processus (en anglais robotic process automation ou RPA)&lt;/p>
+&lt;h3 id="keywords">Keywords&lt;/h3>
+&lt;h4 id="wait-until-keyword-succeeds">Wait Until Keyword Succeeds&lt;/h4>
+&lt;p>webdrivermanager firefox&lt;/p></description></item><item><title>Hugo Installation</title><link>https://www.xudongzhao.com/posts/hugo-installation/</link><pubDate>Mon, 06 Nov 2023 23:45:34 +0100</pubDate><guid>https://www.xudongzhao.com/posts/hugo-installation/</guid><description>&lt;p>test&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> sudo apt-get -y install golang-go
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Mac os&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Ubuntu&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo version
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git config --global init.defaultBranch main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new site etertech-blog -f yml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new post/proxmox-ve-tutoriel.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Enable color highlighting for ls command in mac OS X Terminal</title><link>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</link><pubDate>Sat, 29 Jul 2023 14:42:11 +0100</pubDate><guid>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</guid><description>&lt;p>Because macOS now uses Zsh instead of Bash, we have to modify the ~/.zshrc file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;export CLICOLOR=1&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;alias ls=&amp;#34;ls -G&amp;#34;&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;alias ll=&amp;#34;ls -lG&amp;#34;&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We could test it with
+ls
+ll&lt;/p></description></item></channel></rss>
