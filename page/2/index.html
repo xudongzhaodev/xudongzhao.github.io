@@ -8,6 +8,9 @@ Xudong ZHAO
 <span aria-hidden=true class=navbar-burger__line></span>
 <span aria-hidden=true class=navbar-burger__line></span></a><nav class=nav><ul class=nav__list id=navMenu></ul><ul class="nav__list nav__list--end"><li class=nav__list-item><div class=themeswitch><a title="Switch Theme"><i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></li></ul></nav></div></header><div class="post
 animated fadeInDown"><div class=post__content></div></div><div class="post
+animated fadeInDown"><div class=post__content><h3><a href=/posts/helm/>HELM</a></h3><p><p>helm uninstall [NOM_DE_LA_RELEASE]</p><p>helm list</p><p>helm install my-release oci://REGISTRY_NAME/REPOSITORY_NAME/mariadb
+helm install mariadb oci://registry-1.docker.io/bitnamicharts/mariadb</p><h1 id=sous-powershell>sous PowerShell</h1><p>$encodedPassword = kubectl get secret &ndash;namespace devops mariadb -o jsonpath="{.data.mariadb-root-password}"</p><p>$decodedPassword = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($encodedPassword))</p><p>Write-Output $decodedPassword</p><h1 id=sous-bash>sous Bash</h1><p>kubectl get secret &ndash;namespace devops my-mariadb -o jsonpath="{.data.mariadb-root-password}" | base64 -d</p><p>kubectl run my-mariadb-client &ndash;rm &ndash;tty -i &ndash;restart='Never' &ndash;image docker.io/bitnami/mariadb:11.1.3-debian-11-r0 &ndash;namespace devops &ndash;command &ndash; bash</p><p>helm get notes my-mariadb</p><p>helm get values mon-mariadb</p><p>kubectl run mon-mariadb-client &ndash;rm &ndash;tty -i &ndash;restart='Never' &ndash;image docker.io/bitnami/mariadb:11.1.3-debian-11-r0 &ndash;namespace devops001 &ndash;command &ndash; bash</p></p></div><div class=post__footer><em class="fas fa-calendar-day"></em>
+<span class=post__footer-date>Mon, Nov 20, 2023</span></div></div><div class="post
 animated fadeInDown"><div class=post__content><h3><a href=/posts/python-cheatsheet/>PYTHON</a></h3><p></p></div><div class=post__footer><em class="fas fa-calendar-day"></em>
 <span class=post__footer-date>Sat, Nov 18, 2023</span></div></div><div class="post
 animated fadeInDown"><div class=post__content><h3><a href=/posts/kubernetes/>KUBERNETES</a></h3><p></p><a href=/posts/kubernetes/>Read more</a></div><div class=post__footer><em class="fas fa-calendar-day"></em>
@@ -16,7 +19,7 @@ animated fadeInDown"><div class=post__content><h3><a href=/posts/vim-neomvim/>VI
 <span class=post__footer-date>Tue, Nov 14, 2023</span></div></div><div class="post
 animated fadeInDown"><div class=post__content><h3><a href=/posts/cmd-cheatsheet/>CMD CHEATSHEET</a></h3><p></p><a href=/posts/cmd-cheatsheet/>Read more</a></div><div class=post__footer><em class="fas fa-calendar-day"></em>
 <span class=post__footer-date>Mon, Nov 13, 2023</span></div></div><div class="post
-animated fadeInDown"><div class=post__content><h3><a href=/posts/conteneur/>CONTENEUR</a></h3><p></p><a href=/posts/conteneur/>Read more</a></div><div class=post__footer><em class="fas fa-calendar-day"></em>
+animated fadeInDown"><div class=post__content><h3><a href=/posts/docker-and-docker-compose/>DOCKER AND DOCKER COMPOSE</a></h3><p></p><a href=/posts/docker-and-docker-compose/>Read more</a></div><div class=post__footer><em class="fas fa-calendar-day"></em>
 <span class=post__footer-date>Thu, Nov 9, 2023</span></div></div><div class="post
 animated fadeInDown"><div class=post__content><h3><a href=/posts/robot-framework/>ROBOT FRAMEWORK</a></h3><p></p></div><div class=post__footer><em class="fas fa-calendar-day"></em>
 <span class=post__footer-date>Wed, Nov 8, 2023</span></div></div><div class="post
