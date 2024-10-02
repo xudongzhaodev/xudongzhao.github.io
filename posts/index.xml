@@ -46,15 +46,22 @@ Send &amp;#34;&amp;lt;&amp;#34;
 Send &amp;#34;&amp;gt;&amp;#34;
 }
 &lt;/code>&lt;/pre>&lt;h2 id="run-automatically-the-script-every-time-your-computer-starts">Run automatically the script every time your computer starts&lt;/h2>
-&lt;p>Create a shortcut of your script:&lt;/p></description></item><item><title>Ubuntu</title><link>https://www.xudongzhao.com/posts/ubuntu/</link><pubDate>Tue, 28 Nov 2023 08:10:29 +0000</pubDate><guid>https://www.xudongzhao.com/posts/ubuntu/</guid><description>&lt;h2 id="apt">apt&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Installation Java&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install openjdk-17-jdk-headless
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Désinstaller Java&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-alternatives --list java
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get purge openjdk-17-*
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt autoremove
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Terraform</title><link>https://www.xudongzhao.com/posts/terraform/</link><pubDate>Mon, 27 Nov 2023 08:39:57 +0000</pubDate><guid>https://www.xudongzhao.com/posts/terraform/</guid><description>&lt;h2 id="terraform-commande">terraform commande&lt;/h2>
+&lt;p>Create a shortcut of your script:&lt;/p></description></item><item><title>Ubuntu</title><link>https://www.xudongzhao.com/posts/ubuntu/</link><pubDate>Tue, 28 Nov 2023 08:10:29 +0000</pubDate><guid>https://www.xudongzhao.com/posts/ubuntu/</guid><description>&lt;h2 id="change-ubuntu-server-name">Change ubuntu server name&lt;/h2>
+&lt;ol>
+&lt;li>Modify the machine&amp;rsquo;s hostname&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo hostnamectl set-hostname new_name
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>Update configuration files
+Next, you need to update the /etc/hostname file to make this change permanent. Open this file with a text editor like nano:&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /etc/hostname
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>Update the /etc/hosts file
+It&amp;rsquo;s recommended to also update the /etc/hosts file to avoid hostname resolution issues. Open it with nano:&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vim /etc/hosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Find the line where your old hostname appears and replace it with the new one. The line will look like this:&lt;/p></description></item><item><title>Terraform</title><link>https://www.xudongzhao.com/posts/terraform/</link><pubDate>Mon, 27 Nov 2023 08:39:57 +0000</pubDate><guid>https://www.xudongzhao.com/posts/terraform/</guid><description>&lt;h2 id="terraform-commande">terraform commande&lt;/h2>
 &lt;h3 id="terraform-init">terraform init&lt;/h3>
 &lt;h3 id="terraform-plan">terraform plan&lt;/h3>
 &lt;h3 id="terraform-destroy">terraform destroy&lt;/h3>
