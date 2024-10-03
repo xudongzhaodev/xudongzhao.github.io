@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Xudong ZHAO's Blog</title><link>https://www.xudongzhao.com/posts/</link><description>Recent content in Posts on Xudong ZHAO's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 29 Sep 2024 23:55:44 +0200</lastBuildDate><atom:link href="https://www.xudongzhao.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Wsl Tmux</title><link>https://www.xudongzhao.com/posts/wsl-tmux/</link><pubDate>Sun, 29 Sep 2024 23:55:44 +0200</pubDate><guid>https://www.xudongzhao.com/posts/wsl-tmux/</guid><description>&lt;h3 id="installation">Installation&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Xudong ZHAO's Blog</title><link>https://www.xudongzhao.com/posts/</link><description>Recent content in Posts on Xudong ZHAO's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 02 Oct 2024 17:30:06 +0200</lastBuildDate><atom:link href="https://www.xudongzhao.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Java Dev</title><link>https://www.xudongzhao.com/posts/java-dev/</link><pubDate>Wed, 02 Oct 2024 17:30:06 +0200</pubDate><guid>https://www.xudongzhao.com/posts/java-dev/</guid><description>&lt;h2 id="sdkman">sdkman&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Installation dskman&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install unzip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -s &lt;span style="color:#e6db74">&amp;#34;https://get.sdkman.io&amp;#34;&lt;/span> | bash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> source &lt;span style="color:#e6db74">&amp;#34;/home/xzhao/.sdkman/bin/sdkman-init.sh&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sdk help
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sdk install java 17.0.0-tem
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sdk current java
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Wsl Tmux</title><link>https://www.xudongzhao.com/posts/wsl-tmux/</link><pubDate>Sun, 29 Sep 2024 23:55:44 +0200</pubDate><guid>https://www.xudongzhao.com/posts/wsl-tmux/</guid><description>&lt;h3 id="installation">Installation&lt;/h3>
 &lt;pre tabindex="0">&lt;code>sudo apt install tmux
 &lt;/code>&lt;/pre></description></item><item><title>Wsl Oh My Zsh</title><link>https://www.xudongzhao.com/posts/wsl-oh-my-zsh/</link><pubDate>Sun, 29 Sep 2024 19:45:43 +0200</pubDate><guid>https://www.xudongzhao.com/posts/wsl-oh-my-zsh/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /etc/shells
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt update
@@ -6,9 +15,15 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install zsh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sh -c &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install fonts-powerline
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chsh -s &lt;span style="color:#66d9ef">$(&lt;/span>which zsh&lt;span style="color:#66d9ef">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Modify .zshrc&lt;/p>
 &lt;pre tabindex="0">&lt;code>ZSH_THEME=&amp;#34;agnoster&amp;#34;
-&lt;/code>&lt;/pre>&lt;p>In ubuntu&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>theme Powerlevel10k&lt;/p>
+&lt;p>NerdFont&lt;/p>
+&lt;pre tabindex="0">&lt;code>choco install nerd-fonts-hack
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone --depth&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">1&lt;/span> https://github.com/romkatv/powerlevel10k.git &lt;span style="color:#e6db74">${&lt;/span>ZSH_CUSTOM&lt;span style="color:#66d9ef">:-&lt;/span>$HOME/.oh-my-zsh/custom&lt;span style="color:#e6db74">}&lt;/span>/themes/powerlevel10k
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ZSH_THEME&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;powerlevel10k/powerlevel10k&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In ubuntu&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install fonts-powerline
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -145,7 +160,14 @@ helm get notes my-mariadb
 helm get values mon-mariadb
 kubectl run mon-mariadb-client --rm --tty -i --restart=&amp;#39;Never&amp;#39; --image docker.io/bitnami/mariadb:11.1.3-debian-11-r0 --namespace devops001 --command -- bash
 &lt;/code>&lt;/pre></description></item><item><title>Python</title><link>https://www.xudongzhao.com/posts/python-cheatsheet/</link><pubDate>Sat, 18 Nov 2023 19:56:23 +0100</pubDate><guid>https://www.xudongzhao.com/posts/python-cheatsheet/</guid><description>&lt;h2 id="anaconda">Anaconda&lt;/h2>
-&lt;p>&lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda cheatsheet&lt;/a>&lt;/p></description></item><item><title>Kubernetes</title><link>https://www.xudongzhao.com/posts/kubernetes/</link><pubDate>Thu, 16 Nov 2023 09:17:00 +0100</pubDate><guid>https://www.xudongzhao.com/posts/kubernetes/</guid><description>&lt;h2 id="kubernetes-commandes">Kubernetes commandes&lt;/h2>
+&lt;p>&lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda cheatsheet&lt;/a>&lt;/p>
+&lt;h2 id="environement-virual-and-pip-install-by-requirementstxt">Environement virual and pip install by requirements.txt&lt;/h2>
+&lt;pre tabindex="0">&lt;code>sudo apt install python3-pip
+sudo apt install python3-venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+&lt;/code>&lt;/pre></description></item><item><title>Kubernetes</title><link>https://www.xudongzhao.com/posts/kubernetes/</link><pubDate>Thu, 16 Nov 2023 09:17:00 +0100</pubDate><guid>https://www.xudongzhao.com/posts/kubernetes/</guid><description>&lt;h2 id="kubernetes-commandes">Kubernetes commandes&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Shell" data-lang="Shell">&lt;span style="display:flex;">&lt;span>kubectl get namespaces
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods -A
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get po -A
