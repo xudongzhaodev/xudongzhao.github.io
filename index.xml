@@ -102,7 +102,15 @@ terraform show
 &lt;p>```bash&lt;/p>
 &lt;p>sudo snap install gh&lt;/p>
 &lt;p>gh auth login&lt;/p>
-&lt;p>```&lt;/p></description></item><item><title>Google Cloud Platform</title><link>https://www.xudongzhao.com/posts/google-cloud-platform/</link><pubDate>Wed, 22 Nov 2023 09:25:33 +0100</pubDate><guid>https://www.xudongzhao.com/posts/google-cloud-platform/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>
+&lt;p>```&lt;/p>
+&lt;h3 id="disable-git-prompt-for-credentials">Disable git prompt for credentials&lt;/h3>
+&lt;p>bash
+GIT_TERMINAL_PROMPT=0
+windows&lt;/p>
+&lt;h3 id="configure-the-local-repository-to-use-the-specified-username-and-email-address">configure the local repository to use the specified username and email address&lt;/h3>
+&lt;pre tabindex="0">&lt;code>git config user.name &amp;#34;Xudong ZHAO&amp;#34;
+git config user.email &amp;#34;xudong.zhao@protonmail.com&amp;#34;
+&lt;/code>&lt;/pre></description></item><item><title>Google Cloud Platform</title><link>https://www.xudongzhao.com/posts/google-cloud-platform/</link><pubDate>Wed, 22 Nov 2023 09:25:33 +0100</pubDate><guid>https://www.xudongzhao.com/posts/google-cloud-platform/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Bash" data-lang="Bash">&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud compute instances create my-first-instance
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud compute instances list
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gcloud config list
