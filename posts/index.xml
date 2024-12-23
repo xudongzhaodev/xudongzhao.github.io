@@ -325,11 +325,11 @@ Robot Framework Language Server&lt;/p>
 &lt;p>webdrivermanager firefox&lt;/p></description></item><item><title>Hugo Installation</title><link>https://www.xudongzhao.com/posts/hugo-installation/</link><pubDate>Mon, 06 Nov 2023 23:45:34 +0100</pubDate><guid>https://www.xudongzhao.com/posts/hugo-installation/</guid><description>&lt;p>test&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get update &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> sudo apt-get -y install golang-go
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Mac os&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Install&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Mac os&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install hugo
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Ubuntu&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## Ubuntu&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install hugo
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo version
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -338,7 +338,19 @@ Robot Framework Language Server&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo new post/proxmox-ve-tutoriel.md
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Enable color highlighting for ls command in mac OS X Terminal</title><link>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</link><pubDate>Sat, 29 Jul 2023 14:42:11 +0100</pubDate><guid>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</guid><description>&lt;p>Because macOS now uses Zsh instead of Bash, we have to modify the ~/.zshrc file.&lt;/p>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#or use snap&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo snap install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>snap info hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo snap refresh hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="update-theme">Update theme&lt;/h2>
+&lt;pre tabindex="0">&lt;code># Step 1: Go to your local Hugo project&amp;#39;s root directory
+cd /path/to/your-hugo-site
+# Step 2: Update the Anatole module (fetch the latest version)
+hugo mod get -u github.com/lxndrblz/anatole
+# Step 3: Clean up and reinstall module dependencies
+hugo mod tidy
+&lt;/code>&lt;/pre></description></item><item><title>Enable color highlighting for ls command in mac OS X Terminal</title><link>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</link><pubDate>Sat, 29 Jul 2023 14:42:11 +0100</pubDate><guid>https://www.xudongzhao.com/posts/enable-color-highlighting-for-ls-command-in-mac-os-x-terminal/</guid><description>&lt;p>Because macOS now uses Zsh instead of Bash, we have to modify the ~/.zshrc file.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;export CLICOLOR=1&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.zshrc
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;alias ls=&amp;#34;ls -G&amp;#34;&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.zshrc
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#39;alias ll=&amp;#34;ls -lG&amp;#34;&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.zshrc
