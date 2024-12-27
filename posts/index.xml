@@ -55,7 +55,20 @@ source ~/.zshrc
 &lt;pre tabindex="0">&lt;code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 &lt;/code>&lt;/pre>&lt;h3 id="install-powerlevel10k-in-oh-my-zsh-folder">Install Powerlevel10k in Oh My Zsh folder&lt;/h3>
 &lt;pre tabindex="0">&lt;code>git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-&lt;/code>&lt;/pre></description></item><item><title>Hhkb Keyborad Setting for Azerty French User</title><link>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</link><pubDate>Fri, 20 Sep 2024 10:17:40 +0200</pubDate><guid>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</guid><description>&lt;p>As a developer living in Paris, I have to use a standard AZERTY ISO French keyboard at work, so my HHKB needs to have a similar configuration to a standard French keyboard.&lt;/p>
+&lt;/code>&lt;/pre>&lt;h2 id="problem-with-zsh-corrupt-history-file-homeusernamezsh_history">Problem with zsh: corrupt history file /home/username/.zsh_history&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Back up your current history file:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cp ~/.zsh_history ~/.zsh_history.backup
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Clean the corrupt history file: Run the following command to remove corrupt lines:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>strings ~/.zsh_history &amp;gt; ~/.zsh_history_clean
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv ~/.zsh_history_clean ~/.zsh_history
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Set proper permissions:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod &lt;span style="color:#ae81ff">600&lt;/span> ~/.zsh_history
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#Reload Zsh history:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fc -R
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Hhkb Keyborad Setting for Azerty French User</title><link>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</link><pubDate>Fri, 20 Sep 2024 10:17:40 +0200</pubDate><guid>https://www.xudongzhao.com/posts/hhkb-keyborad-setting-for-azerty-french-user/</guid><description>&lt;p>As a developer living in Paris, I have to use a standard AZERTY ISO French keyboard at work, so my HHKB needs to have a similar configuration to a standard French keyboard.&lt;/p>
 &lt;p>I used the HHKB mapping tool to change the Ctrl and Caps keys and AutoHotkey to map Alt + W to &amp;lt; and Alt + Shift + W to &amp;gt;.&lt;/p>
 &lt;h2 id="create-the-script">Create the script&lt;/h2>
 &lt;p>Here is the script:&lt;/p>
@@ -78,7 +91,7 @@ Send &amp;#34;&amp;gt;&amp;#34;
 &lt;li>Update configuration files
 Next, you need to update the /etc/hostname file to make this change permanent. Open this file with a text editor like nano:&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo nano /etc/hostname
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vim /etc/hostname
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
 &lt;li>Update the /etc/hosts file
 It&amp;rsquo;s recommended to also update the /etc/hosts file to avoid hostname resolution issues. Open it with nano:&lt;/li>
@@ -179,10 +192,7 @@ kubectl run mon-mariadb-client --rm --tty -i --restart=&amp;#39;Never&amp;#39; -
 &lt;p>&lt;a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda cheatsheet&lt;/a>&lt;/p>
 &lt;h2 id="environement-virual-and-pip-install-by-requirementstxt">Environement virual and pip install by requirements.txt&lt;/h2>
 &lt;pre tabindex="0">&lt;code>sudo apt install python3-pip
-sudo apt install python3-venv
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+sudo apt install python3-ven
 &lt;/code>&lt;/pre></description></item><item><title>Kubernetes</title><link>https://www.xudongzhao.com/posts/kubernetes/</link><pubDate>Thu, 16 Nov 2023 09:17:00 +0100</pubDate><guid>https://www.xudongzhao.com/posts/kubernetes/</guid><description>&lt;h2 id="kubernetes-commandes">Kubernetes commandes&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Shell" data-lang="Shell">&lt;span style="display:flex;">&lt;span>kubectl get namespaces
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl get pods -A
